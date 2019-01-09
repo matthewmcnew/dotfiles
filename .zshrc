@@ -83,7 +83,11 @@ export HISTSIZE=1000
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(rbenv init -)"
-alias cat="ccat --bg=dark"
+
+if type "ccat" > /dev/null; then
+    alias cat="ccat --bg=dark"
+fi
+
 alias clean-docker='docker rm -f $(docker ps -aq) &>/dev/null; docker system prune --all -f && docker volume prune -f && docker images && docker volume ls && docker ps'
 
 fd() {
