@@ -76,7 +76,7 @@ export PATH=$PATH:~/go/bin
 
 source $ZSH/oh-my-zsh.sh
 
-setopt correct
+#setopt correct
 setopt HIST_IGNORE_ALL_DUPS
 export HISTSIZE=1000
 
