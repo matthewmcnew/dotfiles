@@ -1,3 +1,5 @@
+[ -f ~/.local.config.zsh ] && source ~/.local.config.zsh
+
 # OH MY ZSH setup
 source ~/workspace/dotfiles/ohmyz.zsh
 
