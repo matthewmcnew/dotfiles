@@ -23,3 +23,6 @@ setopt auto_cd # Auto change to a dir without typing cd
 c () {
   printf '\033[6 q'
 }
+
+# Setup Cursor
+c
