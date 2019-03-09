@@ -4,6 +4,8 @@ agnoster/agnoster-zsh-theme
 
 rupa/z
 Tarrasch/zsh-bd
+popstas/zsh-command-time
+tysonwolker/iterm-tab-colors
 
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
