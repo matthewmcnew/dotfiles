@@ -7,6 +7,7 @@ Tarrasch/zsh-bd
 popstas/zsh-command-time
 tysonwolker/iterm-tab-colors
 superbrothers/zsh-kubectl-prompt
+joshuarubin/zsh-direnv
 
 zsh-users/zsh-completions
 zsh-users/zsh-autosuggestions
