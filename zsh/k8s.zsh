@@ -1,9 +1,9 @@
 kon() {
     prompt_k8s() {
-      if [[ $(history -15) =~ "kail|helm" ]]; then
+      if [[ $(history -15) =~ "kube|kail|helm" ]]; then
         color=cyan
         prompt_segment $PRIMARY_FG $color
-        print -Pn " $(dirname $ZSH_KUBECTL_PROMPT) "
+        print -Pn "⚙ $(dirname $ZSH_KUBECTL_PROMPT) "
       fi
     }
 
