@@ -1,6 +1,6 @@
 kon() {
     prompt_k8s() {
-      if [[ $(history -15) =~ "kube|kail|helm" ]]; then
+      if [[ $(history -15) =~ "kube|kail|helm|k" ]]; then
         color=cyan
         prompt_segment $PRIMARY_FG $color
         print -Pn "⚙ $(dirname $ZSH_KUBECTL_PROMPT) "
@@ -17,3 +17,23 @@ koff() {
 }
 
 kon
+
+alias k="kubectl"
+alias kc="kubectx"
+alias ke="kubens"
+
+install_cache_builder() {
+  FILE="kubectl-fzf_darwin_amd64.tar.gz"
+
+  cd /tmp
+  wget "https://github.com/bonnefoa/kubectl-fzf/releases/latest/download/$FILE"
+  tar -xf $FILE
+  mkdir -p ~/local/bin/
+  install cache_builder ~/local/bin/cache_builder
+}
+
+
+export PATH=$PATH:~/local/bin/
+source <(kubectl completion zsh)
+source ~/workspace/dotfiles/customplugin/kubectl.plugin.zsh
+zstyle ':completion:*' matcher-list 'r:|=*'
